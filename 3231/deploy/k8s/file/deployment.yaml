@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: application-3231
-          image: 1pro/api-tester:3.0.0
+          image: morn4u/api-tester:3.0.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -67,6 +67,6 @@ spec:
         - name: secret-datasource
           secret:
             secretName: api-tester-3231-postgresql
-        - name : shared-volume
+        - name: shared-volume
           persistentVolumeClaim:
             claimName: shared-volume-3231

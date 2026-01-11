@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: database-3231
-          image: 1pro/api-tester:3.0.0
+          image: morn4u/api-tester:3.0.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

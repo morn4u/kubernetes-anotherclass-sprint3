@@ -34,8 +34,7 @@ spec:
       terminationGracePeriodSeconds: 60
       containers:
         - name: api-tester-3221
-          # 1pro는 본인의 dockerhub username으로 변경해 주세요.
-          image: 1pro/api-tester:3.0.0
+          image: morn4u/api-tester:3.0.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -44,19 +43,20 @@ spec:
             - configMapRef:
                 name: api-tester-3221-properties
           terminationMessagePath: "/usr/src/myapp/log/termination.message"
-#          hostAliases:
-#            - ip: "20.200.245.247"
-#              hostnames:
-#                - "github.com"
-#          dnsPolicy: None
-#          dnsConfig:
-#            nameservers:
-#              - "8.8.8.8"
-#              - "8.8.4.4"
+          #          hostAliases:
+          #            - ip: "20.200.245.247"
+          #              hostnames:
+          #                - "github.com"
+          #          dnsPolicy: None
+          #          dnsConfig:
+          #            nameservers:
+          #              - "8.8.8.8"
+          #              - "8.8.4.4"
           lifecycle:
             preStop:
               exec:
-                command: ["sh", "-c", "sleep 5; curl localhost:8080/graceful-shutdown"]
+                command:
+                  ["sh", "-c", "sleep 5; curl localhost:8080/graceful-shutdown"]
           startupProbe:
             httpGet:
               path: "/startup"
