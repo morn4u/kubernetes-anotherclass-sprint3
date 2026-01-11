@@ -30,7 +30,7 @@ spec:
         version: 3.0.0
     spec:
       nodeSelector:
-        kubernetes.io/hostname: k8s-master
+        kubernetes.io/hostname: master-01
       terminationGracePeriodSeconds: 60
       containers:
         - name: api-tester-3212
