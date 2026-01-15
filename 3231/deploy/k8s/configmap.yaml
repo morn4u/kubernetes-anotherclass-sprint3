@@ -16,4 +16,4 @@ data:
   postgresql_filepath: "/usr/src/myapp/datasource/postgresql-info.yaml"
   minio_access_key: minioadmin
   minio_secret_key: minioadmin
-  minio_endpoint: "http://192.168.56.20:9000"
+  minio_endpoint: "http://40.0.0.121:9000"
