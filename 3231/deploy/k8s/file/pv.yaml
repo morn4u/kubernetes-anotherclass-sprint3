@@ -13,5 +13,5 @@ spec:
   accessModes:
     - ReadWriteMany
   nfs:
-    path: /file-storage
+    path: /nfs-storage
     server: 40.0.0.122
